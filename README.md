@@ -1,8 +1,8 @@
 # My Hyprland configs (in catppuccin mocha flavour) :3
 
 Here some previews
-![Screenshot](assets/preview1.png)
-![Screenshot](assets/preview2.png)
+![Screenshot](assets/image0.png)
+![Screenshot](assets/image1.png)
 
 Installing system packages.
 
