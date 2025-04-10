@@ -1,5 +1,9 @@
 # My Hyprland configs (in catppuccin mocha flavour) :3
 
+Here some previews
+![Screenshot](assets/preview1.png)
+![Screenshot](assets/preview2.png)
+
 First, You need to install some dependencies!
 
 For Arch(btw)
