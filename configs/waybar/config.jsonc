@@ -151,6 +151,13 @@
 		"escape": true,
 		"tooltip": false
 	},
+	"custom/weather": {
+        	"format": "{}",
+        	"tooltip": true,
+        	"interval": 1800,
+        	"exec": "python $HOME/.config/waybar/modules/weather.py",
+        	"return-type": "json"
+        },
 	"escape": true,
 	}
 }

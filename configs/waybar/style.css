@@ -11,19 +11,19 @@ window#waybar {
     background-color: @bg2;
     color: @fg;
     transition-property: background-color;
-    border-radius: 12;
+    border-radius: 14px;
     transition-duration: .5s;
 }
 
 
 
 #custom-menu {
-	padding: 2 15;
-	margin: 5 5 5 10;
+	padding: 2px 15px;
+	margin: 5px 5px 5px 10px;
 	color: @vl;
 	background-color: @bg;
 	border: none;
-	border-radius: 20;
+	border-radius: 20px;
 }
 #custom-menu:hover {
 	color: @fl;
@@ -31,23 +31,23 @@ window#waybar {
 
 
 #workspaces {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	color: @fg;
 	background-color: @bg;
-	border-radius: 8 0 0 8;
+	border-radius: 10px 0px 0px 10px;
 }
 button {
 	box-shadow: inset 0 -3px transparent;
 	border: none;
-	border-radius: 0;
+	border-radius: 0px;
 }
 button:hover {
 	background: inherit;
 	box-shadow: inset 0 -3px transparent;
 }
 #workspaces button {
-	padding: 0 5px;
+	padding: 0px 5px;
 	background-color: transparent;
 	color: @gf;
 }
@@ -60,20 +60,20 @@ button:hover {
 }
 
 #window {
-	padding: 2 15; 
-	margin: 5;
+	padding: 2px 15px; 
+	margin: 5px;
 	color: @fg;
 	background-color: @bg;
-	border-radius: 0 8 8 0;
+	border-radius: 0px 10px 10px 0px;
 }
 #window:hover {
 	color: @peach;
 }
 #tray {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	background-color: @bg;
-	border-radius: 0;
+	border-radius: 0px;
 }
 
 #taskbar {
@@ -81,7 +81,7 @@ button:hover {
 	padding-right: 5px;
 	margin: 5px 5px 5px 5px;
 	background-color: @bg;
-	border-radius: 0;
+	border-radius: 0px;
 }
 
 #taskbar button {
@@ -97,19 +97,19 @@ button:hover {
 	margin-right: 0px;
 }
 #language {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	color: @fg;
 	background-color: @bg;
-	border-radius: 8px 0 0 8px;
+	border-radius: 10px 0px 0px 10px;
 }
 
 #battery {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	color: @fg;
 	background-color: @bg;
-	border-radius: 0;
+	border-radius: 0px;
 }
 
 #battery:hover {
@@ -120,8 +120,8 @@ button:hover {
 }
 
 #pulseaudio {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	color: @fg;
 	background-color: @bg;
 	border-radius: 0px;
@@ -134,23 +134,35 @@ button:hover {
 }
 
 #clock {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	color: @fg;
 	background-color: @bg;
-	border-radius: 8px;
+	border-radius: 10px;
 }
 #clock:hover {
 	color: @sky;
 }
 
+#custom-weather {
+	padding: 2px 15px;
+	margin: 5px;
+	color: @fg;
+	background-color: @bg;
+	border-radius: 0px 10px 10px 0px;
+}
+#custom-weather:hover {
+	color: @sky;
+}
+
 #custom-power {
-	padding: 2 15;
-	margin: 5;
+	padding: 2px 15px;
+	margin: 5px;
 	color: @vl;
 	background-color: @bg;
-	border-radius: 0px 8px 8px 0px;
+	border-radius: 0px 10px 10px 0px;
 }
+
 #custom-power:hover {
 	color: @red;
 }
@@ -159,6 +171,5 @@ tooltip {
 	background: @bg;
 	margin: 20px;
 	padding: 15px;
-	border-radius: 10px;
+	border-radius: 14px;
 }
-
