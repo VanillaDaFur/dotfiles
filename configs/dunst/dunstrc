@@ -7,8 +7,8 @@ horizontal_padding = 20
 
 width = 350
 height = 200
-offset = 16x30
-origin = bottom-right
+offset = 18x30
+origin = top-right
 
 frame_width = 2
 separator_height = 2
@@ -16,7 +16,7 @@ frame_color = "#cba6f7"
 separator_color= frame
 
 sort = no
-font = Readex Pro 12
+font = JetBrainsMono Nerd Font 12
 markup = full
 format = "<b>%s</b>\n%b"
 alignment = left

@@ -2,7 +2,7 @@
 
 ## SET GTK THEMES, ICONS, CURSORS AND FONTS VIA GSETTINGS
 
-THEME='Catppuccin-Purple-Dark'
+THEME='catppuccin-mocha-mauve-standard+rimless,normal'
 ICONS='Papirus-Dark'
 FONT='Readex Pro 10'
 CURSOR='Sunity-cursors'

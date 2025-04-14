@@ -19,18 +19,25 @@ final_space = true
    
   [[blocks.segments]]
     template = '╭─'
-    foreground = '#cdd6f4'
+    foreground = '#9399b2'
     background = 'transparent'
     type = 'text'
+    style = 'plain'
+
+  [[blocks.segments]]
+    template = '  {{ if .SSHSession }} {{ end }}{{ .UserName }}' 
+    foreground = '#a6e3a1'
+    background = '#181825'
+    type = 'session'
     style = 'plain'
   
   [[blocks.segments]]
     template = ' {{ if .WSL }}WSL at {{ end }}{{.Icon}}  '
-    foreground = '#cdd6f4'
+    foreground = '#a6e3a1'
     background = '#181825'
     type = 'os'
     style = 'diamond'
-    leading_diamond = ''
+    leading_diamond = ''
 
   [[blocks.segments]]
     template = '  {{ .Path }} '
@@ -65,11 +72,10 @@ final_space = true
   [[blocks.segments]]
     template = ' 󰚭 {{ .FormattedMs }} '
     foreground = '#f9e2af'
-    background = '#eba0ac'
+    background = '#313244'
     type = 'executiontime'
     style = 'diamond'
     leading_diamond = ''
-    trailing_diamond = ''
 
     [blocks.segments.properties]
       cache_duration = 'none'
@@ -82,7 +88,7 @@ final_space = true
 
   [[blocks.segments]]
     template = '╰─'
-    foreground = '#cdd6f4'
+    foreground = '#9399b2'
     background = 'transparent'
     type = 'text'
     style = 'plain'

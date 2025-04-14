@@ -6,14 +6,14 @@
 	"margin-top": 5,
 	"margin-left": 18,
 	"margin-right": 18,
-	"modules-left": ["hyprland/workspaces", "wlr/taskbar" , "hyprland/window"],
+	"modules-left": ["custom/menu", "hyprland/workspaces", "wlr/taskbar" , "hyprland/window"],
 	"modules-center": ["clock"],
 	"modules-right": ["hyprland/language", "pulseaudio", "battery", "tray" ,"custom/power"],	
 
 	"custom/menu": {
 		"format": "{icon}",
-		"format-icons": "",
-		"on-click": "~/.config/rofi/launchers/type-6/launcher_2.sh",
+		"format-icons": "",
+		"on-click": "~/.config/rofi/launchers/type-2/launcher_2.sh",
 		"escape": true,
 		"tooltip": false
 	},
@@ -146,7 +146,7 @@
 
 	"custom/power": {
 		"format": "{icon}",
-		"format-icons": "",
+		"format-icons": "⏻",
 		"on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh",
 		"escape": true,
 		"tooltip": false
@@ -158,6 +158,6 @@
         	"exec": "python $HOME/.config/waybar/modules/weather.py",
         	"return-type": "json"
         },
-	"escape": true,
+	"escape": true
 	}
 }

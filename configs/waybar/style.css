@@ -19,11 +19,11 @@ window#waybar {
 
 #custom-menu {
 	padding: 2px 15px;
-	margin: 5px 5px 5px 10px;
-	color: @vl;
+	margin: 5px;
+	color: @green;
 	background-color: @bg;
 	border: none;
-	border-radius: 20px;
+	border-radius: 10px 0px 0px 10px;
 }
 #custom-menu:hover {
 	color: @fl;
@@ -35,7 +35,7 @@ window#waybar {
 	margin: 5px;
 	color: @fg;
 	background-color: @bg;
-	border-radius: 10px 0px 0px 10px;
+	border-radius: 0px;
 }
 button {
 	box-shadow: inset 0 -3px transparent;
