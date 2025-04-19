@@ -6,13 +6,13 @@ Here some previews
 
 Installing system packages.
 
-Arch
+# Arch
 Just copy this command
 ```bash
 paru -S hyprland swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct qt5ct nwg-look dolphin ark vesktop-bin oh-my-posh-bin darkly-bin hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy
 ```
 
-Void
+# Void
 This one is more complicated
 1. Add makrennel/hyprland-void repository
 ```bash
