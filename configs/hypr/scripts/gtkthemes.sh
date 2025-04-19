@@ -4,8 +4,8 @@
 
 THEME='catppuccin-mocha-mauve-standard+rimless,normal'
 ICONS='Papirus-Dark'
-FONT='Readex Pro 10'
-CURSOR='Sunity-cursors'
+FONT='Readex Pro 11'
+CURSOR='Bibata-Modern-Ice'
 
 SCHEMA='gsettings set org.gnome.desktop.interface'
 
