@@ -1,4 +1,4 @@
-# My Hyprland configs (in catppuccin mocha flavour) :3
+# My Hyprland config (in catppuccin mocha flavour) :3
 
 Here some previews
 ![Screenshot](assets/image0.png)
@@ -16,11 +16,18 @@ paru -S hyprland swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-use
 This one is more complicated
 1. Add makrennel/hyprland-void repository
 ```
-sudo bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/hyprland-void.conf'
+bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/hyprland-void.conf'
 ```
 2. Now you can install *some* packages
 ```
-sudo xbps-install hyprland hyprland-protocols swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox Waybar dolphin dolphin-plugins ark qt6ct qt5ct xorg-minimal xorg-fonts xorg-server-xwayland brightnessctl sassc polkit seatd elogind polkit-gnome dunst mesa-dri swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji
+xbps-install hyprland hyprland-protocols swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox Waybar dolphin dolphin-plugins ark qt6ct qt5ct xorg-minimal xorg-fonts xorg-server-xwayland brightnessctl sassc polkit seatd elogind polkit-gnome dunst mesa-dri swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji
+```
+
+3. Enable important services(and add yourself in seatd group)
+```
+ln -s /etc/sv/polkitd /etc/runit/runsvdir/default
+ln -s /etc/sv/seatd /etc/runit/runsvdir/default
+usermod -aG _seatd $(whoami)
 ```
 
 # GTK
