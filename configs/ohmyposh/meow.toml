@@ -32,7 +32,7 @@ final_space = true
     style = 'plain'
   
   [[blocks.segments]]
-    template = ' {{ if .WSL }}WSL at {{ end }}{{.Icon}}  '
+    template = '   '
     foreground = '#a6e3a1'
     background = '#181825'
     type = 'os'
@@ -62,7 +62,7 @@ final_space = true
     [blocks.segments.properties]
       cache_duration = 'none'
       commit_icon = '@'
-      fetch_status = true
+      fetch_status = false
 
 [[blocks]]
   type = 'prompt'
