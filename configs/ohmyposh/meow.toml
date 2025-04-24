@@ -3,14 +3,14 @@ version = 3
 final_space = true
 
 [secondary_prompt]
-  template = '{{ if .Root }}##{{else}}$${{end}} '
-  foreground = 'magenta'
+  template = ' '
+  foreground = '#cba6f7'
   background = 'transparent'
 
 [transient_prompt]
-  template = '{{ if .Root }}#{{else}}${{end}} '
+  template = ' '
   background = 'transparent'
-  foreground_templates = ['{{if gt .Code 0}}#eba0ac{{end}}', '{{if eq .Code 0}}#a6e3a1{{end}}']
+  foreground_templates = ['{{if gt .Code 0}}#eba0ac{{end}}', '{{if eq .Code 0}}#cba6f7{{end}}']
 
 [[blocks]]
   type = 'prompt'
@@ -41,7 +41,7 @@ final_space = true
 
   [[blocks.segments]]
     template = '  {{ .Path }} '
-    foreground = '#181825'
+    foreground = '#1e1e2e'
     background = '#b4befe'
     type = 'path'
     style = 'powerline'
@@ -53,7 +53,7 @@ final_space = true
 
   [[blocks.segments]]
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
-    foreground = '#181825'
+    foreground = '#1e1e2e'
     background = '#fab387'
     type = 'git'
     style = 'diamond'
@@ -94,11 +94,11 @@ final_space = true
     style = 'plain'
 
   [[blocks.segments]]
-    template = '{{ if .Root }}#{{else}}${{end}}'
+    template = '{{ if .Root }}#{{else}}{{end}}'
     background = 'transparent'
     type = 'text'
     style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}#eba0ac{{end}}', '{{if eq .Code 0}}#a6e3a1{{end}}']
+    foreground_templates = ['{{if gt .Code 0}}#eba0ac{{end}}', '{{if eq .Code 0}}#cba6f7{{end}}']
 
     [blocks.segments.properties]
       cache_duration = 'none'

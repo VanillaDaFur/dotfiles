@@ -36,7 +36,7 @@ Installing Catppuccin GTK Theme
 git clone https://github.com/catppuccin/gtk.git
 cd gtk
 python -m venv cat
-source m/bin/activate.fish # remove ".fish" if you don't use fish
+source cat/bin/activate.fish # remove ".fish" if you don't use fish
 pip install -r requirements.txt
 python build.py mocha -n catppuccin -d ~/.themes -a mauve --tweaks rimless normal
 ```
