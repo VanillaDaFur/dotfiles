@@ -16,7 +16,7 @@ alias l.='exa -a | egrep "^\."'
 #---- Add ~/.local/bin as path and remove fish_greeting ----#
 set -x PATH "$HOME/.local/bin" $PATH
 set -g fish_greeting
-set fzf_fd_opts --hidden --max-depth 5 --exclude Zomboid
+set fzf_fd_opts --hidden --max-depth 3 --exclude Zomboid
 
 #---- Fancy theme for shell ----#
 oh-my-posh init fish --config ~/.config/ohmyposh/meow.toml | source
