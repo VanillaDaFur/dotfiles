@@ -9,7 +9,7 @@ Installing system packages.
 # Arch
 Just copy this command
 ```
-paru -S hyprland swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct qt5ct nwg-look dolphin ark vesktop-bin oh-my-posh-bin darkly-bin hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy
+paru -S hyprland hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct qt5ct nwg-look dolphin ark vesktop-bin oh-my-posh-bin darkly-bin hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy 
 ```
 
 # Void
@@ -20,7 +20,7 @@ bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-v
 ```
 2. Now you can install *some* packages
 ```
-xbps-install hyprland hyprland-protocols swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox Waybar dolphin dolphin-plugins ark qt6ct qt5ct xorg-minimal xorg-fonts xorg-server-xwayland brightnessctl sassc polkit seatd elogind polkit-gnome dunst mesa-dri swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji
+xbps-install hyprland hyprland-protocols hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox Waybar dolphin dolphin-plugins ark qt6ct qt5ct xorg-minimal xorg-fonts xorg-server-xwayland brightnessctl sassc polkit seatd elogind polkit-gnome dunst mesa-dri swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji 
 ```
 
 3. Enable important services(and add yourself in seatd group)
@@ -36,7 +36,7 @@ Installing Catppuccin GTK Theme
 git clone https://github.com/catppuccin/gtk.git
 cd gtk
 python -m venv cat
-source cat/bin/activate.fish # remove ".fish" if you don't use fish
+source m/bin/activate.fish # remove ".fish" if you don't use fish
 pip install -r requirements.txt
 python build.py mocha -n catppuccin -d ~/.themes -a mauve --tweaks rimless normal
 ```
