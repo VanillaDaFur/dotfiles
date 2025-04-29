@@ -24,7 +24,7 @@ USE_BUTTONS=YES
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    center;
+    location:                    north;
     anchor:                      center;
     fullscreen:                  false;
     width:                       800px;
@@ -33,7 +33,7 @@ window {
 
     /* properties for all widgets */
     enabled:                     true;
-    margin:                      0px;
+    margin:                      10px;
     padding:                     0px;
     border:                      0px solid;
     border-radius:               20px;
