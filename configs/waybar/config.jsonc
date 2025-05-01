@@ -9,7 +9,7 @@
   "modules-left": [
     "custom/menu",
     "hyprland/workspaces",
-    "wlr/taskbar",
+    "tray",
     "hyprland/window"
   ],
   "modules-center": [
@@ -19,7 +19,6 @@
     "hyprland/language",
     "pulseaudio",
     "battery",
-    "tray",
     "custom/power"
   ],
   "custom/menu": {
@@ -35,14 +34,16 @@
     "on-scroll-up": "hyprctl dispatch workspace -1",
     "on-scroll-down": "hyprctl dispatch workspace +1",
     "format-icons": {
-      "urgent": "<span color='#eba0ac'></span>",
+      "urgent": "",
       "active": "",
-      "default": "<span color='#6c7086'></span>"
+      "default": ""
     },
-    "tooltip": false
+    "tooltip": false,
+    "escape": true
   },
   "hyprland/window": {
     "format": "{class}",
+    "empty_format": "",
     "separate-outputs": false
   },
   "custom/cmus": {
