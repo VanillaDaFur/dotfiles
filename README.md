@@ -1,9 +1,8 @@
 # My Hyprland config (in catppuccin mocha flavour) :3
 
-Here some previews
-ssets/image2.png)
-
 # Installing system packages.
+
+> I really recommend installing all this on fresh system.
 
 ### Arch
 Just copy this command
