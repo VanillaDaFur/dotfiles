@@ -1,6 +1,6 @@
 # My Hyprland config (in catppuccin mocha flavour) :3
 
-# Installing system packages.
+## Installing system packages.
 
 > I really recommend installing all this on fresh system.
 
