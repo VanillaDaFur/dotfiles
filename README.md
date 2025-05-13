@@ -56,4 +56,4 @@ cp -r src/* ~/.local/share/icons/Papirus
 ![Screenshot](assets/image2.png)
 
 # Credits
-- **[HyDE](https://github.com/HyDE-Project/HyDE) for it's great animations! (i'm way too lazy to play with cubic bezier for them)
+- **[HyDE](https://github.com/HyDE-Project/HyDE)** for it's great animations! (i'm way too lazy to play with cubic bezier for them)
