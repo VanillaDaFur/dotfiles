@@ -12,7 +12,7 @@ window#waybar {
   background-color: @bg2;
   color: @fg;
   transition-property: background-color;
-  border-radius: 14px;
+  border-radius: 12px;
   transition-duration: .5s;
 }
 
@@ -24,7 +24,7 @@ window#waybar {
   color: @green;
   background-color: @bg;
   border: none;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 #custom-menu:hover {
@@ -48,10 +48,7 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  padding: 0px 3px;
-  background-color: @vl;
-  color: @bg2;
-  border-radius: 8px;
+  color: @vl;
   transition: all 0.1s linear;
 }
 
@@ -60,7 +57,7 @@ window#waybar {
 }
 
 #workspaces button.active:hover {
-  color: @bg2;
+  color: @vl;
 }
 
 #workspaces button.urgent {
@@ -87,7 +84,7 @@ button:hover {
   margin: 5px;
   color: @fg;
   background-color: @bg;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 #window:hover {
@@ -133,7 +130,7 @@ button:hover {
   margin: 5px;
   color: @fg;
   background-color: @bg;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 8px 0px 0px 8px;
 }
 
 #language:hover {
@@ -179,7 +176,7 @@ button:hover {
   margin: 5px;
   color: @fg;
   background-color: @bg;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 #clock:hover {
@@ -207,7 +204,7 @@ button:hover {
   margin: 5px;
   color: @vl;
   background-color: @bg;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 8px 8px 0px;
 }
 
 #custom-power:hover {
