@@ -1,4 +1,4 @@
-# My Hyprland config (in catppuccin mocha flavour) :3
+# My Hyprland config in Catppuccin colors
 
 ## Installing system packages.
 
@@ -56,4 +56,6 @@ cp -r src/* ~/.local/share/icons/Papirus
 ![Screenshot](assets/image2.png)
 
 # Credits
-- **[HyDE](https://github.com/HyDE-Project/HyDE)** for it's great animations! (i'm way too lazy to play with cubic bezier for them)
+- **[HyDE](https://github.com/HyDE-Project/HyDE)** for it's great animations (i'm way too lazy to play with cubic bezier for them)
+- **[Rofi Themes](https://github.com/adi1090x/rofi)** for their nice rofi applets and themes for them
+- **[Catppuccin colorscheme](https://catppuccin.com/)** for their beautiful colorscheme
