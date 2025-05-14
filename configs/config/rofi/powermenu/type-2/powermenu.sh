@@ -44,7 +44,7 @@ confirm_cmd() {
     -theme-str 'textbox {horizontal-align: 0.5;}' \
     -dmenu \
     -p 'Confirmation' \
-    -mesg 'Are you Sure?' \
+    -mesg 'Are you sure?' \
     -theme ${dir}/${theme}.rasi
 }
 
@@ -63,13 +63,13 @@ run_cmd() {
   selected="$(confirm_exit)"
   if [[ "$selected" == "$yes" ]]; then
     if [[ $1 == '--shutdown' ]]; then
-      systemctl poweroff
+      loginctl poweroff
     elif [[ $1 == '--reboot' ]]; then
-      systemctl reboot
+      loginctl reboot
     elif [[ $1 == '--suspend' ]]; then
       mpc -q pause
       amixer set Master mute
-      systemctl suspend
+      loginctl suspend
     elif [[ $1 == '--logout' ]]; then
       if [[ "$XDG_CURRENT_DESKTOP" == 'openbox' ]]; then
         openbox --exit

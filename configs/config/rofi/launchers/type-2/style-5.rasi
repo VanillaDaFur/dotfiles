@@ -33,7 +33,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               16px;
+    border-radius:               14px;
     border-color:                @selected;
     background-color:            @background;
     cursor:                      "default";
@@ -59,7 +59,7 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               20px 6px 20px 6px;
+    border-radius:               10px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @foreground;
@@ -69,7 +69,7 @@ inputbar {
 prompt {
     enabled:                     true;
     padding:                     12px;
-    border-radius:               20px 6px 20px 6px;
+    border-radius:               10px;
     background-color:            @selected;
     text-color:                  @background;
 }
@@ -127,7 +127,7 @@ element {
     margin:                      0px;
     padding:                     5px;
     border:                      0px solid;
-    border-radius:               20px 6px 20px 6px;
+    border-radius:               8px;
     border-color:                @selected;
     background-color:            @background;
     text-color:                  @foreground;
@@ -143,7 +143,7 @@ element alternate.normal {
 }
 element selected.normal {
     border:                      0px 6px 0px 6px;
-    border-radius:               20px 6px 20px 6px;
+    border-radius:               8px;
     border-color:                @selected;
     background-color:            @background-alt;
     text-color:                  @selected;
