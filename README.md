@@ -2,16 +2,16 @@
 
 ## Installing system packages.
 
-> I really recommend installing all this on fresh system.
+> I really recommend installing all this on a fresh system.
 
 ### Arch
-Just copy this command
+Just run the following command
 ```
 paru -S hyprland hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct qt5ct nwg-look nemo file-roller nemo-image-converter nemo-preview nemo-emblems vesktop-bin oh-my-posh-bin darkly-bin hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy exa
 ```
 
 ### Void
-This one is more complicated
+This one is a bit more complicated
 1. Add makrennel/hyprland-void repository
 ```
 bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/hyprland-void.conf'
@@ -21,7 +21,7 @@ bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-v
 xbps-install hyprland hyprland-protocols hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox Waybar nemo nemo-image-converter nemo-preview nemo-emblems file-roller qt6ct xorg-minimal xorg-fonts xorg-server-xwayland brightnessctl sassc polkit seatd elogind polkit-gnome dunst mesa-dri swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji nodejs exa
 ```
 
-3. Enable important services(and add yourself in seatd group)
+3. Enable important services(and add yourself to the seatd group)
 ```
 ln -s /etc/sv/polkitd /etc/runit/runsvdir/default
 ln -s /etc/sv/seatd /etc/runit/runsvdir/default
@@ -29,17 +29,17 @@ usermod -aG _seatd $(whoami)
 ```
 
 ### GTK
-Installing Catppuccin GTK Theme
+Install the Catppuccin GTK Theme
 ```
 git clone https://github.com/VanillaDaFur/catppuccin-gtk.git --recurse-submodules
 cd catppuccin-gtk
 python -m venv cat
-source cat/bin/activate.fish # remove ".fish" if you don't use fish
+source cat/bin/activate.fish
 pip install -r requirements.txt
 python build.py mocha -n catppuccin -d ~/.themes -a mauve --tweaks rimless normal
 ```
 ### Icons
-Installing Catppuccin Papirus Icons 
+Install Catppuccin Papirus Icons 
 ```
 wget -qO- https://git.io/papirus-icon-theme-install | env DESTDIR="$HOME/.local/share/icons" sh
 git clone https://github.com/catppuccin/papirus-folders.git 
@@ -56,6 +56,6 @@ cp -r src/* ~/.local/share/icons/Papirus
 ![Screenshot](assets/image2.png)
 
 # Credits
-- **[HyDE](https://github.com/HyDE-Project/HyDE)** for it's great animations (i'm way too lazy to play with cubic bezier for them)
-- **[Rofi Themes](https://github.com/adi1090x/rofi)** for their nice rofi applets and themes for them
+- **[HyDE](https://github.com/HyDE-Project/HyDE)** for its great animations (I'm way too lazy to play with cubic bezier for them)
+- **[Rofi Themes](https://github.com/adi1090x/rofi)** for their nice rofi applets and themes
 - **[Catppuccin colorscheme](https://catppuccin.com/)** for their beautiful colorscheme
