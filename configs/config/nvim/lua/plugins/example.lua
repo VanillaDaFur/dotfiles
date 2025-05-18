@@ -12,6 +12,7 @@ return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
 
+  -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
@@ -124,8 +125,6 @@ return {
         "javascript",
         "json",
         "lua",
-        "toml",
-        "css",
         "markdown",
         "markdown_inline",
         "python",
