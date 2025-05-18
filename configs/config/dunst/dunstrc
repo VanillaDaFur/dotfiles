@@ -1,3 +1,5 @@
+# See dunst(5) for all configuration options
+
 [global]
 monitor = 0
 follow = mouse
@@ -39,24 +41,28 @@ mouse_left_click = close_current
 mouse_middle_click = do_action
 mouse_right_click = close_all
 
-[ignore_flameshot_warning]
-body = "grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"
-format = ""
+progress_bar = true
+progress_bar_height = 10
+progress_bar_frame_width = 2
+progress_bar_corner_radius = 3
 
 [urgency_low]
 background = "#181825"
 foreground = "#cdd6f4"
-frame_color = "#cba6f7"
+frame_color = "#a6e3a1"
+highlight = "#a6e3a1"
 timeout = 5
 
 [urgency_normal]
 background = "#181825"
 foreground = "#cdd6f4"
 frame_color = "#cba6f7"
+highlight = "#cba6f7"
 timeout = 5
 
 [urgency_critical]
 background = "#181825"
 foreground = "#cdd6f4"
 frame_color = "#eba0ac"
+highlight = "#eba0ac"
 timeout = 10
