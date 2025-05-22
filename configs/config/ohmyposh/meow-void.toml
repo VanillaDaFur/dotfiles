@@ -1,0 +1,110 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[secondary_prompt]
+template = ' '
+foreground = '#a6e3a1'
+background = 'transparent'
+
+[transient_prompt]
+template = ' '
+background = 'transparent'
+foreground_templates = [
+  '{{if gt .Code 0}}#eba0ac{{end}}',
+  '{{if eq .Code 0}}#a6e3a1{{end}}',
+]
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+template = '╭─'
+foreground = '#9399b2'
+background = 'transparent'
+type = 'text'
+style = 'plain'
+
+[[blocks.segments]]
+template = '  {{ if .SSHSession }} {{ end }}{{ .UserName }}'
+foreground = '#a6e3a1'
+background = '#181825'
+type = 'session'
+style = 'plain'
+
+[[blocks.segments]]
+template = '   '
+foreground = '#a6e3a1'
+background = '#181825'
+type = 'os'
+style = 'diamond'
+leading_diamond = ''
+
+[[blocks.segments]]
+template = '  {{ .Path }} '
+foreground = '#1e1e2e'
+background = '#b4befe'
+type = 'path'
+style = 'powerline'
+powerline_symbol = ''
+
+[blocks.segments.properties]
+cache_duration = 'none'
+style = 'powerlevel'
+
+[[blocks.segments]]
+template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+foreground = '#1e1e2e'
+background = '#fab387'
+type = 'git'
+style = 'diamond'
+trailing_diamond = ''
+
+[blocks.segments.properties]
+cache_duration = 'none'
+commit_icon = '@'
+fetch_status = false
+
+[[blocks]]
+type = 'prompt'
+overflow = 'hidden'
+alignment = 'right'
+
+[[blocks.segments]]
+template = ' 󰚭 {{ .FormattedMs }} '
+foreground = '#f9e2af'
+background = '#313244'
+type = 'executiontime'
+style = 'diamond'
+leading_diamond = ''
+
+[blocks.segments.properties]
+cache_duration = 'none'
+threshold = 500
+
+[[blocks]]
+type = 'prompt'
+alignment = 'left'
+newline = true
+
+[[blocks.segments]]
+template = '╰─'
+foreground = '#9399b2'
+background = 'transparent'
+type = 'text'
+style = 'plain'
+
+[[blocks.segments]]
+template = '{{ if .Root }}#{{else}}{{end}}'
+background = 'transparent'
+type = 'text'
+style = 'plain'
+foreground_templates = [
+  '{{if gt .Code 0}}#eba0ac{{end}}',
+  '{{if eq .Code 0}}#a6e3a1{{end}}',
+]
+
+[blocks.segments.properties]
+cache_duration = 'none'
