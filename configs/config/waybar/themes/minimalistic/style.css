@@ -20,15 +20,16 @@ window#waybar {
 
 #custom-menu {
   padding: 2px 15px;
-  margin: 5px;
+  margin: 0px;
+  font-size: 18px;
   color: @vl;
-  background-color: @bg;
   border: none;
   border-radius: 5px;
 }
 
 #custom-menu:hover {
   color: @fl;
+  transition: all 0.1s linear;
 }
 
 /* ----- Workspaces ----- */
@@ -80,10 +81,9 @@ button:hover {
 /* ----- Window ----- */
 
 #window {
-  padding: 2px 15px;
+  padding: 2px 6px;
   margin: 5px;
   color: @fg;
-  background-color: @bg;
   border-radius: 5px;
 }
 
@@ -95,8 +95,7 @@ button:hover {
 
 #tray {
   padding: 2px 15px;
-  margin: 5px;
-  background-color: @bg;
+  margin: 0px;
   border-radius: 5px;
 }
 
@@ -126,10 +125,9 @@ button:hover {
 /* ----- Language ----- */
 
 #language {
-  padding: 2px 15px;
-  margin: 5px;
+  padding: 2px 12px;
+  margin: 3px;
   color: @fg;
-  background-color: @bg;
   border-radius: 5px;
 }
 
@@ -140,10 +138,9 @@ button:hover {
 /* ----- Battery ----- */
 
 #battery {
-  padding: 2px 15px;
-  margin: 5px;
+  padding: 0px 15px;
+  margin: 3px;
   color: @fg;
-  background-color: @bg;
   border-radius: 5px;
 }
 
@@ -154,10 +151,9 @@ button:hover {
 /* ----- Pulseaudio (aka Pipewire) ----- */
 
 #pulseaudio {
-  padding: 2px 15px;
-  margin: 5px;
+  padding: 2px 12px;
+  margin: 3px;
   color: @fg;
-  background-color: @bg;
   border-radius: 5px;
 }
 
@@ -175,7 +171,6 @@ button:hover {
   padding: 2px 15px;
   margin: 5px;
   color: @fg;
-  background-color: @bg;
   border-radius: 5px;
 }
 
@@ -201,9 +196,9 @@ button:hover {
 
 #custom-power {
   padding: 2px 15px;
-  margin: 5px;
+  margin: 0px;
+  font-size: 17px;
   color: @vl;
-  background-color: @bg;
   border-radius: 5px;
 }
 

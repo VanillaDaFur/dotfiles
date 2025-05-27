@@ -21,6 +21,7 @@ window#waybar {
 #custom-menu {
   padding: 2px 15px;
   margin: 5px;
+  font-size: 16px;
   color: @vl;
   background-color: @bg;
   border: none;
@@ -202,6 +203,7 @@ button:hover {
 #custom-power {
   padding: 2px 15px;
   margin: 5px;
+  font-size: 16px;
   color: @vl;
   background-color: @bg;
   border-radius: 0px 8px 8px 0px;

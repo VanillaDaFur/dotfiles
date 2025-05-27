@@ -23,7 +23,7 @@
   ],
   "custom/menu": {
     "format": "{icon}",
-    "format-icons": "",
+    "format-icons": "",
     "on-click": "~/.config/rofi/launchers/type-2/launcher_2.sh",
     "escape": true,
     "tooltip": false

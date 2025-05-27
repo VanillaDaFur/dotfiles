@@ -9,43 +9,37 @@
   "modules-left": [
     "custom/menu",
     "hyprland/workspaces",
-    "hyprland/window"
+    "tray"
   ],
   "modules-center": [
     "clock",
-    "custom/weather"
+    "hyprland/window"
   ],
   "modules-right": [
     "hyprland/language",
     "pulseaudio",
     "battery",
-    "tray",
     "custom/power"
   ],
   "custom/menu": {
     "format": "{icon}",
-    "format-icons": "",
+    "format-icons": "",
     "on-click": "~/.config/rofi/launchers/type-2/launcher_2.sh",
     "escape": true,
     "tooltip": false
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{}",
     "on-click": "activate",
     "on-scroll-up": "hyprctl dispatch workspace -1",
     "on-scroll-down": "hyprctl dispatch workspace +1",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
     "tooltip": false,
     "escape": true
   },
   "hyprland/window": {
-    "format": "{class}",
-    "empty_format": "",
-    "separate-outputs": false
+    "format": "<span color ='#cba6f7'>󰄛</span> {class}",
+    "separate-outputs": false,
+    "tooltip": false
   },
   "custom/cmus": {
     "format": "{icon} {}",
