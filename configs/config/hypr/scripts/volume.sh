@@ -20,7 +20,7 @@ else
 fi
 
 # Set full path to icon
-ICON_PATH=$HOME/.local/share/icons/Papirus-Dark/24x24/panel/audio-volume-${ICON}.svg
+ICON_PATH=$HOME/.local/share/icons/Papirus/24x24/panel/audio-volume-${ICON}.svg
 
 # Call dunst to send a notification
 dunstify -a "changeVolume" -i ${ICON_PATH} -t 2000 -r 2593 -u normal -h int:value:"${VOLUME}" "Volume: ${VOLUME}%"
