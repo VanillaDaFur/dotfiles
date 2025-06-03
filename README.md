@@ -7,7 +7,7 @@
 ### Arch
 Just run the following command
 ```
-yay -S hyprland hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct nwg-look thunar gvfs file-roller vesktop-bin oh-my-posh darkly hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy exa
+yay -S hyprland hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct nwg-look thunar gvfs file-roller vesktop-bin oh-my-posh darkly hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy exa fzf
 ```
 
 ### Void
