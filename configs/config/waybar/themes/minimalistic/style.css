@@ -1,5 +1,5 @@
 /* ----- General ----- */
-@import "mocha.css";
+@import "colors.css";
 
 * {
   font-family: JetBrainsMono Nerd Font;
@@ -22,7 +22,7 @@ window#waybar {
   padding: 2px 15px;
   margin: 0px;
   font-size: 18px;
-  color: @vl;
+  color: @purple;
   border: none;
   border-radius: 5px;
 }
@@ -42,14 +42,14 @@ window#waybar {
 }
 
 #workspaces button {
-  padding: 0px 3px;
+  padding: 0px 5px;
   background-color: transparent;
   color: @overlay0;
   transition: all 0.1s linear;
 }
 
 #workspaces button:hover {
-  color: @vl;
+  color: @purple;
   transition: all 0.1s linear;
 }
 
@@ -58,7 +58,7 @@ window#waybar {
 }
 
 #workspaces button.active:hover {
-  color: @vl;
+  color: @purple;
 }
 
 #workspaces button.urgent {
@@ -88,7 +88,7 @@ button:hover {
 }
 
 #window:hover {
-  color: @vl;
+  color: @purple;
 }
 
 /* ----- Tray ----- */
@@ -198,7 +198,7 @@ button:hover {
   padding: 2px 15px;
   margin: 0px;
   font-size: 17px;
-  color: @vl;
+  color: @purple;
   border-radius: 5px;
 }
 
