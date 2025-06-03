@@ -1,13 +1,35 @@
 return {
   {
-    "neovim/nvim-lspconfig",
+    "williamboman/mason.nvim",
+    version = "^1.0.0",
+    build = ":MasonUpdate",
+    config = true,
+    --opts = {
+    --  check_outdated_packages_on_open = true,
+    --}
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    version = "^1.0.0",
     opts = {
-      servers = {
-        taplo = {},
-        jsonls = {},
-        tailwindcss = {},
-        pylsp = {},
-      },
+      auto_install = true,
     },
+  },
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+      local mason_lspconfig = require("mason-lspconfig")
+
+      mason_lspconfig.setup({
+        ensure_installed = { "lua_ls", "taplo", "jsonls", "tailwindcss", "pylsp", "bashls" },
+      })
+
+      mason_lspconfig.setup_handlers({
+        function(server_name)
+          require("lspconfig")[server_name].setup({})
+        end,
+      })
+    end,
   },
 }
