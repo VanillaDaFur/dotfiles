@@ -69,7 +69,6 @@ alias l.='exa -a | egrep "^\."'
 
 #---- Shell integrations ----------------------------------#
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
 
 #---- FzF Styling -----------------------------------------#
 export FZF_DEFAULT_OPTS=" \
