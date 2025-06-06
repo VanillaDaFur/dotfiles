@@ -4,9 +4,6 @@ return {
     version = "^1.0.0",
     build = ":MasonUpdate",
     config = true,
-    --opts = {
-    --  check_outdated_packages_on_open = true,
-    --}
   },
   {
     "williamboman/mason-lspconfig.nvim",
@@ -22,7 +19,7 @@ return {
       local mason_lspconfig = require("mason-lspconfig")
 
       mason_lspconfig.setup({
-        ensure_installed = { "lua_ls", "taplo", "jsonls", "tailwindcss", "pylsp", "bashls" },
+        ensure_installed = { "lua_ls", "taplo", "jsonls", "tailwindcss", "pylsp", "bashls", "rust_analyzer" },
       })
 
       mason_lspconfig.setup_handlers({

@@ -8,6 +8,7 @@ return {
       ensure_installed = {
         "lua",
         "bash",
+        "fish",
         "markdown",
         "markdown_inline",
         "python",
