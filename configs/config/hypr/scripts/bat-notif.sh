@@ -21,10 +21,10 @@ while true; do
 
   # Send notification
   if [ $BATTERY -gt 95 ] && [ $DISCHARGING -eq 0 ] && [ ! -f $FULL ]; then
-    dunstify -a "battery" -i /home/Vanilla/.local/share/icons/Papirus/24x24/panel/battery-100.svg -t 2000 -r 2593 -u low "Battery Charged" "Battery is fully charged."
+    notify-send -i /home/Vanilla/.local/share/icons/Papirus/24x24/panel/battery-100.svg -t 4000 -r 2594 -u low "Battery Charged" "Battery is fully charged."
     touch $FULL
   elif [ $BATTERY -le $WARNING ] && [ $DISCHARGING -eq 1 ] && [ ! -f $EMPTY ]; then
-    dunstify -a "battery" -i /home/Vanilla/.local/share/icons/Papirus/24x24/panel/battery-010.svg -t 10000 -r 2593 -u critical "Low Battery" "${BATTERY}% of battery remaining."
+    notify-send -i /home/Vanilla/.local/share/icons/Papirus/24x24/panel/battery-010.svg -t 10000 -r 2594 -u critical "Low Battery" "${BATTERY}% of battery remaining."
     touch $EMPTY
   fi
   sleep 120
