@@ -1,5 +1,24 @@
 # My Hyprland config in Catppuccin colors
 
+# Screenshots! 
+
+![Screenshot](assets/image0.png)
+![Screenshot](assets/image1.png)
+![Screenshot](assets/image2.png)
+
+
+## Programs in dotfiles
+- **Compositor**: [Hyprland (Wayland)](https://hypr.land/)
+- **Status Bar**: [Waybar](https://github.com/Alexays/Waybar)
+- **Notification daemon**: [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) (Also used for notification applets)
+- **Browser**: Firefox
+- **Wallpaper daemon**: [Swww](https://github.com/LGFae/swww)
+- **Screenshot tool**: [grim](https://github.com/emersion/grim) + [slurp](https://github.com/emersion/slurp) + [hyprpicker](https://github.com/hyprwm/hyprpicker) (to freeze screen during screenshot)
+- **App Launcher**: [Rofi (wayland fork)](https://github.com/lbonn/rofi)
+- **Terminal**: [Kitty](https://github.com/kovidgoyal/kitty)
+- **Shell**: [fish](https://github.com/fish-shell/fish-shell) + [starship](https://github.com/starship/starship)
+
+
 ## Installing system packages.
 
 > I really recommend installing all this on a fresh system.
@@ -7,7 +26,10 @@
 ### Arch
 Just run the following command
 ```
-yay -S hyprland hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox waybar rofi-wayland dunst polkit-gnome brightnessctl sassc noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd pipewire pipewire-pulse wireplumber qt6ct nwg-look thunar gvfs file-roller vesktop-bin oh-my-posh darkly hyprshot ttf-readex-pro frameworkintegration nodejs npm swappy exa fzf
+yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi \
+    kitty firefox waybar rofi-wayland swaync swww nwg-look qt6ct thunar gvfs file-roller vesktop starship swappy exa \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd ttf-readex-pro otf-bebas-neue-git \
+    pipewire pipewire-pulse wireplumber darkly frameworkintegration nodejs npm
 ```
 
 ### Void
@@ -18,7 +40,10 @@ bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-v
 ```
 2. Now you can install *some* packages
 ```
-xbps-install -S hyprland hyprland-protocols hyprlock hypridle swww xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs kitty firefox Waybar nemo nemo-image-converter nemo-preview nemo-emblems file-roller qt6ct xorg-minimal xorg-fonts xorg-server-xwayland brightnessctl sassc polkit seatd elogind polkit-gnome dunst mesa-dri swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji nodejs exa fzf
+xbps-install -S hyprland hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs xorg-minimal \
+    kitty firefox Waybar Thunar gvfs file-roller qt6ct nwg-look SwayNotificationCenter swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji nodejs exa fzf
+    brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland \
+    google-fonts-ttf xorg-fonts 
 ```
 
 3. Enable important services(and add yourself to the seatd group)
@@ -48,12 +73,6 @@ curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folder
 cp -r src/* ~/.local/share/icons/Papirus
 ./papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
 ```
-
-# Screenshots! 
-
-![Screenshot](assets/image0.png)
-![Screenshot](assets/image1.png)
-![Screenshot](assets/image2.png)
 
 # Credits
 - **[HyDE](https://github.com/HyDE-Project/HyDE)** for its great animations (I'm way too lazy to play with cubic bezier for them)
