@@ -1,10 +1,13 @@
-# My Hyprland config in Catppuccin colors
+<h1 align="center"> My Hyprland config in awesome catppuccin colors</h1>
 
-# Screenshots! 
-
-![Screenshot](assets/image0.png)
-![Screenshot](assets/image1.png)
-![Screenshot](assets/image2.png)
+<!-- # Main -->
+![Screenshot](assets/main.png)
+<!-- # Browser -->
+![Screenshot](assets/browser.png)
+<!-- # Rofi and notification applets -->
+![Screenshot](assets/rofi-and-stuff.png)
+<!-- # Terminal stuff -->
+![Screenshot](assets/terminal-stuff.png)
 
 
 ## Programs in dotfiles
@@ -27,7 +30,7 @@
 Just run the following command
 ```
 yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi \
-    kitty firefox waybar rofi-wayland swaync swww nwg-look qt6ct thunar gvfs file-roller vesktop starship swappy exa \
+    kitty firefox waybar rofi-wayland swaync swww nwg-look qt6ct thunar tumbler gvfs file-roller vesktop starship swappy exa \
     noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd ttf-readex-pro otf-bebas-neue-git \
     pipewire pipewire-pulse wireplumber darkly frameworkintegration nodejs npm
 ```
@@ -41,7 +44,7 @@ bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-v
 2. Now you can install *some* packages
 ```
 xbps-install -S hyprland hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs xorg-minimal \
-    kitty firefox Waybar Thunar gvfs file-roller qt6ct nwg-look SwayNotificationCenter swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji nodejs exa fzf
+    kitty firefox Waybar Thunar tumbler gvfs file-roller qt6ct nwg-look SwayNotificationCenter swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji nodejs exa fzf
     brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland \
     google-fonts-ttf xorg-fonts 
 ```
