@@ -1,5 +1,5 @@
 /* ----- General ----- */
-@import "colors.css";
+@import "../shared/colors.css";
 
 * {
   font-family: JetBrainsMono Nerd Font;
