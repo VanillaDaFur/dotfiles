@@ -31,7 +31,7 @@ Just run the following command
 ```
 yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi \
     kitty firefox waybar rofi-wayland swaync swww nwg-look qt6ct nemo gvfs file-roller vesktop starship swappy exa \
-    noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome ttf-jetbrains-mono-nerd ttf-readex-pro otf-bebas-neue-git \
+    noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome otf-bebas-neue-git \
     pipewire pipewire-pulse wireplumber darkly frameworkintegration nodejs npm
 ```
 
@@ -47,6 +47,7 @@ sudo dnf install hyprland hyprlock hypridle xdg-user-dirs brightnessctl sassc ac
     kitty firefox waybar rofi-wayland SwayNotificationCenter swww qt6ct darkly nemo gvfs file-roller starship swappy eza \
     google-noto-fonts-all google-noto-emoji-fonts
 ```
+
 ### Void
 This one is a bit more complicated
 1. Add makrennel/hyprland-void repository
@@ -108,6 +109,7 @@ wget \
 mkdir $HOME/.local/share/fonts/{ReadexPro,JetBrainsMonoNerd}
 tar xvf 1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz -C ~/.local/share/fonts/ReadexPro/
 tar xvf JetBrainsMono.tar.xz -C $HOME/.local/share/fonts/JetBrainsMonoNerd
+fc-cache -f -v
 ```
 
 # Credits
