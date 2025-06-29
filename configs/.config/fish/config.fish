@@ -6,11 +6,11 @@ end
 set fish_greeting
 
 #---- Aliases
-alias ls='exa --icons --color=always --group-directories-first'
-alias ll='exa -alF --icons --color=always --group-directories-first'
-alias la='exa -a --icons --color=always --group-directories-first'
-alias l='exa -F --icons --color=always --group-directories-first'
-alias l.='exa -a | egrep "^\."'
+alias ls='eza --icons --color=always --group-directories-first'
+alias ll='eza -alF --icons --color=always --group-directories-first'
+alias la='eza -a --icons --color=always --group-directories-first'
+alias l='eza -F --icons --color=always --group-directories-first'
+alias l.='eza -a | egrep "^\."'
 
 # Transient Promt & Starship
 function starship_transient_prompt_func

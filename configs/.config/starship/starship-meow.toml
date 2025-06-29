@@ -39,27 +39,16 @@ continuation_prompt = ' '
 [os]
 disabled = false
 style = "bg:crust fg:mauve"
+format = "[ $symbol  ]($style)"
 
 [os.symbols]
-Windows = ""
-Ubuntu = "󰕈"
 SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
 Gentoo = "󰣨"
-Fedora = "󰣛"
+Fedora = ""
 Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "   "
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+Arch = ""
+Artix = ""
+Void = ""
 
 [username]
 show_always = true
