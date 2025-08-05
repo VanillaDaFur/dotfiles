@@ -12,13 +12,13 @@
 
 ## Programs in dotfiles
 - **Compositor**: [Hyprland (Wayland)](https://hypr.land/)
-- **Status Bar**: [Waybar](https://github.com/Alexays/Waybar)
-- **Notification daemon**: [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) (Also used for notification applets)
+- **Status Bar**: [waybar](https://github.com/Alexays/Waybar)
+- **Notification daemon**: [swaync](https://github.com/ErikReider/SwayNotificationCenter) (Also used for notification applets)
 - **Browser**: Firefox
-- **Wallpaper daemon**: [Swww](https://github.com/LGFae/swww)
+- **Wallpaper daemon**: [swww](https://github.com/LGFae/swww)
 - **Screenshot tool**: [grim](https://github.com/emersion/grim) + [slurp](https://github.com/emersion/slurp) + [hyprpicker](https://github.com/hyprwm/hyprpicker) (to freeze screen during screenshot)
-- **App Launcher**: [Rofi (wayland fork)](https://github.com/lbonn/rofi)
-- **Terminal**: [Kitty](https://github.com/kovidgoyal/kitty)
+- **App Launcher**: [rofi (wayland fork)](https://github.com/lbonn/rofi)
+- **Terminal**: [kitty](https://github.com/kovidgoyal/kitty)
 - **Shell**: [fish](https://github.com/fish-shell/fish-shell) + [starship](https://github.com/starship/starship)
 
 
@@ -27,7 +27,7 @@
 > I really recommend installing all this on a fresh system
 
 ### Arch
-Just run the following command
+1. Install system packages
 ```
 yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi \
     kitty firefox waybar rofi-wayland swaync swww nwg-look qt6ct nemo gvfs file-roller vesktop starship swappy exa \
@@ -35,31 +35,18 @@ yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hypr
     pipewire pipewire-pulse wireplumber darkly frameworkintegration nodejs npm
 ```
 
-### Fedora
-1. Add solopasha/hyprland copr (for more up-to-date hyprland and extra packages) and terra
+### Void
+1. Add makrennel/hyprland-void and VanillaDaFur/xbps-templates for unavaliable packages in main repository.
 ```
-sudo dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
-sudo dnf copr enable solopasha/hyprland
+bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/10-hyprland-void.conf'
+bash -c 'echo "repository=https://raw.githubusercontent.com/VanillaDafur/repository-x86_64-glibc" > /etc/xbps.d/10-extra-pkgs.conf'
 ```
 2. Install system packages
 ```
-sudo dnf install hyprland hyprlock hypridle xdg-user-dirs brightnessctl sassc acpi \
-    kitty firefox waybar rofi-wayland SwayNotificationCenter swww qt6ct darkly nemo gvfs file-roller starship swappy eza \
-    google-noto-fonts-all google-noto-emoji-fonts
-```
-
-### Void
-This one is a bit more complicated
-1. Add makrennel/hyprland-void repository
-```
-bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/hyprland-void.conf'
-```
-2. Now you can install *some* system packages
-```
-xbps-install -S hyprland hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs xorg-minimal \
-    kitty firefox Waybar Thunar tumbler gvfs file-roller qt6ct nwg-look SwayNotificationCenter swappy noto-fonts-ttf noto-fonts-cjk noto-fonts-emoji nodejs exa fzf
-    brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland \
-    google-fonts-ttf xorg-fonts 
+xbps-install -S hyprland hyprland-qtutils hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
+    kitty firefox Waybar nemo gvfs file-roller qt6ct darkly nwg-look SwayNotificationCenter swww swappy starship nodejs exa fzf \
+    brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland xdg-user-dirs pipewire wireplumber \
+    google-fonts-ttf ttf-jetbrains-mono-nerd xorg-fonts 
 ```
 
 3. Enable important services(and add yourself to the seatd group)
@@ -82,13 +69,6 @@ pip install -r requirements.txt
 python build.py mocha -n catppuccin -d ~/.themes -a mauve --tweaks rimless normal
 ```
 
-### Cursor
-Install Bibata-Modern-Ice cursor
-```
-wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Original-Classic.tar.xz
-tar xvf JetBrainsMono.tar.xz -C $HOME/.local/share/fonts
-```
-
 ### Icons
 Install Catppuccin Papirus Icons 
 ```
@@ -100,16 +80,11 @@ cp -r src/* ~/.local/share/icons/Papirus
 ./papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
 ```
 
-### Fonts
-Install fonts like: Readex Pro, JetBrainsMono Nerd
+### Cursor
+Install Bibata-Modern-Classic cursor
 ```
-wget \
-    https://github.com/ThomasJockin/readexpro/archive/1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz \
-    https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.tar.xz
-mkdir $HOME/.local/share/fonts/{ReadexPro,JetBrainsMonoNerd}
-tar xvf 1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz -C ~/.local/share/fonts/ReadexPro/
-tar xvf JetBrainsMono.tar.xz -C $HOME/.local/share/fonts/JetBrainsMonoNerd
-fc-cache -f -v
+wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Classic.tar.xz
+tar xvf Bibata-Modern-Classic.tar.xz -C $HOME/.local/share/icons
 ```
 
 # Credits
