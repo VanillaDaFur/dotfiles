@@ -63,13 +63,31 @@ run_cmd() {
   selected="$(confirm_exit)"
   if [[ "$selected" == "$yes" ]]; then
     if [[ $1 == '--shutdown' ]]; then
-      loginctl poweroff
+      if pidof systemd >/dev/null 2>&1; then
+        # On systemd systems
+        systemctl poweroff
+      else
+        # else.
+        loginctl poweroff
+      fi
     elif [[ $1 == '--reboot' ]]; then
-      loginctl reboot
+      if pidof systemd >/dev/null 2>&1; then
+        # On systemd systems
+        systemctl reboot
+      else
+        # Else.
+        loginctl reboot
+      fi
     elif [[ $1 == '--suspend' ]]; then
       mpc -q pause
       amixer set Master mute
-      loginctl suspend
+      if pidof systemd >/dev/null 2>&1; then
+        # On systemd systems
+        systemctl suspend
+      else
+        # Else.
+        loginctl suspend
+      fi
     elif [[ $1 == '--logout' ]]; then
       if [[ "$XDG_CURRENT_DESKTOP" == 'openbox' ]]; then
         openbox --exit
