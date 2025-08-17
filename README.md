@@ -59,7 +59,6 @@ sudo bash -c '
   ln -sf /etc/sv/seatd /etc/runit/runsvdir/default
 '
 sudo usermod -aG _seatd $(whoami)
-
 ```
 
 ## Theming
