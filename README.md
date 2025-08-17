@@ -13,7 +13,7 @@
 ## Programs in dotfiles
 - **Compositor**: [Hyprland (Wayland)](https://hypr.land/)
 - **Status Bar**: [waybar](https://github.com/Alexays/Waybar)
-- **Notification daemon**: [swaync](https://github.com/ErikReider/SwayNotificationCenter) (Also used for notification applets)
+- **Notification daemon**: [dunst](https://github.com/dunst-project/dunst) (Also used for notification applets)
 - **Browser**: Firefox
 - **Wallpaper daemon**: [swww](https://github.com/LGFae/swww)
 - **Screenshot tool**: [grim](https://github.com/emersion/grim) + [slurp](https://github.com/emersion/slurp) + [hyprpicker](https://github.com/hyprwm/hyprpicker) (to freeze screen during screenshot)
@@ -29,8 +29,8 @@
 ### Arch
 1. Install system packages
 ```
-yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi \
-    kitty firefox waybar rofi-wayland swaync swww nwg-look qt6ct nemo gvfs file-roller vesktop starship swappy exa \
+yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi grim slurp hyprpicker wl-clipboard wl-clip-persist \
+    kitty firefox waybar rofi-wayland dunst swww nwg-look qt6ct nemo gvfs file-roller vesktop starship swappy exa \
     noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome otf-bebas-neue-git \
     pipewire pipewire-pulse wireplumber darkly frameworkintegration nodejs npm
 ```
@@ -38,22 +38,28 @@ yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hypr
 ### Void
 1. Add makrennel/hyprland-void and VanillaDaFur/xbps-templates for unavaliable packages in main repository.
 ```
-bash -c 'echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/10-hyprland-void.conf'
-bash -c 'echo "repository=https://raw.githubusercontent.com/VanillaDafur/repository-x86_64-glibc" > /etc/xbps.d/10-extra-pkgs.conf'
+sudo bash -c '
+  echo "repository=https://raw.githubusercontent.com/Makrennel/hyprland-void/repository-x86_64-glibc" > /etc/xbps.d/10-hyprland-void.conf &&
+  echo "repository=https://raw.githubusercontent.com/VanillaDaFur/xbps-templates/repository-x86_64-glibc" > /etc/xbps.d/10-extra-pkgs.conf
+'
 ```
+
 2. Install system packages
 ```
 xbps-install -S hyprland hyprland-qtutils hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
-    kitty firefox Waybar nemo gvfs file-roller qt6ct darkly nwg-look SwayNotificationCenter swww swappy starship nodejs exa fzf \
-    brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland xdg-user-dirs pipewire wireplumber \
+    kitty firefox Waybar nemo gvfs file-roller qt6ct darkly nwg-look dunst libnotify swww swappy starship nodejs exa fzf grim slurp hyprpicker \
+    brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland xdg-user-dirs pipewire wireplumber wl-clipboard wl-clip-persist \
     google-fonts-ttf ttf-jetbrains-mono-nerd xorg-fonts 
 ```
 
 3. Enable important services(and add yourself to the seatd group)
 ```
-ln -s /etc/sv/polkitd /etc/runit/runsvdir/default
-ln -s /etc/sv/seatd /etc/runit/runsvdir/default
-usermod -aG _seatd $(whoami)
+sudo bash -c '
+  ln -sf /etc/sv/polkitd /etc/runit/runsvdir/default
+  ln -sf /etc/sv/seatd /etc/runit/runsvdir/default
+'
+sudo usermod -aG _seatd $(whoami)
+
 ```
 
 ## Theming
