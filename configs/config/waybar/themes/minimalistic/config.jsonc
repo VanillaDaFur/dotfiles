@@ -9,13 +9,13 @@
   "modules-left": [
     "custom/menu",
     "hyprland/workspaces",
-    "tray"
-  ],
-  "modules-center": [
-    "clock",
     "hyprland/window"
   ],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
+    "tray",
     "hyprland/language",
     "pulseaudio",
     "battery",
@@ -37,7 +37,7 @@
     "escape": true
   },
   "hyprland/window": {
-    "format": "<span color ='#cba6f7'>󰄛</span> {class}",
+    "format": "<span color ='#74c7ec'></span> {class}",
     "separate-outputs": false,
     "tooltip": false
   },
@@ -133,12 +133,11 @@
     "tooltip": false
   },
   "clock": {
-    "format": "<span color='#89dceb'>󰥔</span> {:%H:%M}",
-    "tooltip-format": "<big><span color='#89dceb'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "<span color='#89dceb'></span> <span color='#89dceb'>{:%Y-%m-%d}</span>",
+    "format": "<span color='#b4befe'>󰥔</span> {:%H:%M}",
+    "tooltip-format": "<big><span color='#b4befe'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "<span color='#b4befe'></span> <span color='#b4befe'>{:%Y-%m-%d}</span>",
     "calendar": {
       "mode": "month",
-      "mode-mon-col": 3,
       "weeks-pos": "right",
       "on-scroll": 1,
       "format": {
