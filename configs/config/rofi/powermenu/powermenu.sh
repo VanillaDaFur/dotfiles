@@ -12,11 +12,10 @@
 
 # Current Theme
 dir="$HOME/.config/rofi/powermenu"
-theme='style-3'
+theme="style"
 
 # CMDs
 uptime="$(uptime -p | sed -e 's/up //g')"
-host=$(hostname)
 
 # Options
 shutdown='󰤆'
@@ -30,14 +29,13 @@ no='󰅖'
 # Rofi CMD
 rofi_cmd() {
   rofi -dmenu \
-    -p "Uptime: $uptime" \
-    -mesg "Uptime: $uptime" \
-    -theme ${dir}/${theme}.rasi
+    -p "  Uptime: $uptime" \
+    -theme "${dir}/${theme}".rasi
 }
 
 # Confirmation CMD
 confirm_cmd() {
-  rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
+  rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 330px;}' \
     -theme-str 'mainbox {children: [ "message", "listview" ];}' \
     -theme-str 'listview {columns: 2; lines: 1;}' \
     -theme-str 'element-text {horizontal-align: 0.5;}' \
@@ -45,7 +43,7 @@ confirm_cmd() {
     -dmenu \
     -p 'Confirmation' \
     -mesg 'Are you sure?' \
-    -theme ${dir}/${theme}.rasi
+    -theme "${dir}/${theme}".rasi
 }
 
 # Ask for confirmation
@@ -109,13 +107,13 @@ run_cmd() {
 # Actions
 chosen="$(run_rofi)"
 case ${chosen} in
-$shutdown)
+"$shutdown")
   run_cmd --shutdown
   ;;
-$reboot)
+"$reboot")
   run_cmd --reboot
   ;;
-$lock)
+"$lock")
   if [[ -x '/usr/bin/betterlockscreen' ]]; then
     betterlockscreen -l
   elif [[ -x '/usr/bin/i3lock' ]]; then
@@ -124,10 +122,10 @@ $lock)
     hyprlock
   fi
   ;;
-$suspend)
+"$suspend")
   run_cmd --suspend
   ;;
-$logout)
+"$logout")
   run_cmd --logout
   ;;
 esac

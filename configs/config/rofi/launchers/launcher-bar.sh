@@ -12,9 +12,9 @@
 ## style-11    style-12    style-13    style-14    style-15
 
 dir="$HOME/.config/rofi/launchers"
-theme='style-5-buttn'
+theme='style-bar'
 
 ## Run
 rofi \
     -show drun \
-    -theme ${dir}/${theme}.rasi
+    -theme "${dir}/${theme}".rasi
