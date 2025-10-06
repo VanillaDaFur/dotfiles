@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Get an battery percentage
 BAT="/sys/class/power_supply/BAT0"
@@ -56,4 +56,4 @@ else
   ICON="󱈏"
 fi
 
-echo $ICON \ $CHARGE%
+echo $ICON \ "$CHARGE"%

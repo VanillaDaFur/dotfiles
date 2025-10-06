@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # Set theme variables
 THEME='catppuccin-mocha-mauve-standard+rimless,normal'

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Checks to set correct icon
 notif_volume() {
@@ -24,7 +24,7 @@ notif_volume() {
   # Set full path to icon
   ICON_PATH=$HOME/.local/share/icons/Papirus/24x24/panel/audio-volume-${ICON}.svg
 
-  notify-send -a sys-notif -i ${ICON_PATH} -t 3000 -r 2593 -u normal -h int:value:"${VOLUME}" -h string:synchronous:sys-notif "Volume: ${VOLUME}%"
+  notify-send -a sys-notif -i "${ICON_PATH}" -t 3000 -r 2593 -u normal -h int:value:"${VOLUME}" -h string:synchronous:sys-notif "Volume: ${VOLUME}%"
 }
 notif_mic() {
   # Check to set correct icon
@@ -39,7 +39,7 @@ notif_mic() {
   # Set full path to icon
   ICON_PATH=$HOME/.local/share/icons/Papirus/24x24/panel/microphone-sensitivity-${ICON}.svg
 
-  notify-send -a sys-notif -i ${ICON_PATH} -t 3000 -r 2593 -h string:synchronous:sys-notif "Microphone: ${TEXT}"
+  notify-send -a sys-notif -i "${ICON_PATH}" -t 3000 -r 2593 -h string:synchronous:sys-notif "Microphone: ${TEXT}"
 
 }
 # Main
