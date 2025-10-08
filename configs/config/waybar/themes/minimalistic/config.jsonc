@@ -22,10 +22,10 @@
     "custom/power"
   ],
   "custom/menu": {
-    "format": "{icon}",
-    "format-icons": "",
-    "on-click": "~/.config/rofi/launchers/launcher_2.sh",
+    "exec": "~/.config/waybar/scripts/menu-icon.sh",
+    "on-click": "~/.config/rofi/launchers/launcher-bar.sh",
     "escape": true,
+    "interval": 0,
     "tooltip": false
   },
   "hyprland/workspaces": {
@@ -162,13 +162,6 @@
     "on-click": "~/.config/rofi/powermenu/powermenu.sh",
     "escape": true,
     "tooltip": false
-  },
-  "custom/weather": {
-    "format": "{}",
-    "tooltip": true,
-    "interval": 1800,
-    "exec": "python $HOME/.config/waybar/modules/weather.py",
-    "return-type": "json"
   },
   "escape": true
 }

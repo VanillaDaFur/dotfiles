@@ -19,7 +19,7 @@ window#waybar {
 /* ----- Custom Menu ----- */
 
 #custom-menu {
-  padding: 2px 15px;
+  padding: 2px 12px;
   margin: 0px;
   font-size: 18px;
   color: @blue;
@@ -81,7 +81,7 @@ button:hover {
 /* ----- Window ----- */
 
 #window {
-  padding: 2px 6px;
+  padding: 2px 8px;
   margin: 5px;
   color: @fg;
   border-radius: 5px;
@@ -94,7 +94,7 @@ button:hover {
 /* ----- Tray ----- */
 
 #tray {
-  padding: 2px 15px;
+  padding: 2px 12px;
   margin: 0px;
   border-radius: 5px;
 }
@@ -138,7 +138,7 @@ button:hover {
 /* ----- Battery ----- */
 
 #battery {
-  padding: 0px 15px;
+  padding: 0px 12px;
   margin: 3px;
   color: @fg;
   border-radius: 5px;
@@ -195,7 +195,7 @@ button:hover {
 /* ----- Power ----- */
 
 #custom-power {
-  padding: 2px 15px;
+  padding: 2px 15px 0px 12px;
   margin: 0px;
   font-size: 17px;
   color: @red;
