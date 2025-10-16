@@ -24,7 +24,9 @@
 > Works only with Fedora, arch and Void (currently tested on Fedora) 
 
 You can simply run this command:
-`./install.sh`
+```
+./install.sh
+```
 
 If you don't trust such scripts, you can install it manually as described [here](assets/MANUAL-INSTALL.md)
 
