@@ -27,7 +27,7 @@
   2. **Install system packages**
   ```bash
   sudo xbps-install -S hyprland hyprland-qtutils hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
-      kitty firefox Waybar nautilus gvfs file-roller qt6ct darkly rofi nwg-look dunst vesktop libnotify swww swappy starship nodejs exa fzf grim slurp hyprpicker wget git curl xz tar \
+      kitty firefox Waybar nautilus gvfs file-roller qt6ct darkly rofi nwg-look dunst vesktop libnotify swww swappy starship nodejs neovim exa fzf grim slurp hyprpicker wget git curl xz tar gcc \
       brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland xdg-user-dirs pipewire wireplumber wl-clipboard wl-clip-persist \
       google-fonts-ttf ttf-jetbrains-mono-nerd xorg-fonts 
   ```
