@@ -29,11 +29,16 @@ packages_ask() {
     esac
   elif [ "$id" = fedora ]; then
     # Enable copr repositories + terra
+    version=$(grep '^VERSION_ID=' /etc/os-release | cut -d= -f2 | tr -d '"')
+
     sudo sh -c '
       dnf copr enable -y solopasha/hyprland
       dnf copr enable -y deltacopy/darkly
 
-      dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra"$releasever"' terra-release
+      sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+      dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+      dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra"$version"' terra-release
     '
 
     # Then, install core packages
@@ -50,10 +55,11 @@ packages_ask() {
     sudo sh -c '
       echo "repository=https://raw.githubusercontent.com/Encoded14/void-extra/repository-x86_64-glibc" > /etc/xbps.d/10-hyprland-void.conf
       echo "repository=https://raw.githubusercontent.com/VanillaDaFur/xbps-templates/repository-x86_64-glibc" > /etc/xbps.d/10-extra-pkgs.conf
+      xbps-install -Su
     '
 
     # Then, install core packages
-    grep -vE '^(#|$)' assets/packages/void/core.txt | xargs sudo xbps-install -Sy
+    grep -vE '^(#|$)' assets/packages/void/core.txt | xargs sudo xbps-install -y
 
     # And extra
     case "$extra" in
@@ -77,6 +83,10 @@ themes_install() {
     pip install -r requirements.txt
     python build.py mocha -n catppuccin -d ~/.themes -a mauve --tweaks rimless normal
   )
+
+  mkdir ~/.config/gtk-4.0
+  ln -s $HOME/.themes/catppuccin-mocha-mauve-standard+rimless,normal/gtk-4.0/* $HOME/.config/gtk-4.0/
+
   # Papirus icons
   printf "\nInstalling papirus icons\n"
 
@@ -103,8 +113,10 @@ themes_install() {
       https://github.com/ThomasJockin/readexpro/archive/1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz \
       https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.tar.xz
 
-    tar xf 1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz -C "$HOME"/.local/share/fonts/ReadexPro/
-    tar xf JetBrainsMono.tar.xz -C "$HOME"/.local/share/fonts/JetBrainsMonoNerd
+    mkdir -p ~/.local/share/fonts/{ReadexPro,JetBrainsMonoNerd}
+
+    tar xf /tmp/1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz -C "$HOME"/.local/share/fonts/ReadexPro/
+    tar xf /tmp/JetBrainsMono.tar.xz -C "$HOME"/.local/share/fonts/JetBrainsMonoNerd
     fc-cache -f -v
   fi
 }

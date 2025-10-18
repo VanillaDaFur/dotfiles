@@ -17,6 +17,9 @@ libnotify
 swww
 starship
 nodejs
+wget
+curl
+git
 eza
 grim
 slurp
@@ -36,6 +39,6 @@ pipewire
 wireplumber
 wl-clipboard
 wl-clip-persist
-fish
+fish-shell
 neovim
 gcc

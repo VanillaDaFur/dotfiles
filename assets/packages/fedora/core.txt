@@ -16,9 +16,13 @@ nautilus
 file-roller
 starship
 eza
+wget
+curl
+git
 google-noto-fonts-all
 google-noto-emoji-fonts
 neovim
 fish
 gcc
 mate-polkit
+firefox

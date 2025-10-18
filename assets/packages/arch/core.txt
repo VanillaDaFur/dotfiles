@@ -29,6 +29,9 @@ file-roller
 nautilus
 starship
 eza
+wget
+curl
+git
 fish
 neovim
 mate-polkit
