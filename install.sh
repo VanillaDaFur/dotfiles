@@ -19,12 +19,12 @@ packages_ask() {
     fi
 
     # Then, install core packages
-    grep -vE '^(#|$)' assets/packages/arch/core.txt | xargs yay -S --needed
+    grep -vE '^(#|$)' assets/packages/arch/core.txt | xargs yay -S --noconfirm
 
     # Ask if user wants to install extra packages
     case "$extra" in
     y | Y)
-      grep -vE '^(#|$)' assets/packages/arch/extra.txt | xargs yay -S --needed
+      grep -vE '^(#|$)' assets/packages/arch/extra.txt | xargs yay -S --noconfirm
       ;;
     esac
   elif [ "$id" = fedora ]; then
@@ -35,7 +35,7 @@ packages_ask() {
       dnf copr enable -y solopasha/hyprland
       dnf copr enable -y deltacopy/darkly
 
-      sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+      dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
       dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
       dnf install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra"$version"' terra-release
@@ -55,7 +55,8 @@ packages_ask() {
     sudo sh -c '
       echo "repository=https://raw.githubusercontent.com/Encoded14/void-extra/repository-x86_64-glibc" > /etc/xbps.d/10-hyprland-void.conf
       echo "repository=https://raw.githubusercontent.com/VanillaDaFur/xbps-templates/repository-x86_64-glibc" > /etc/xbps.d/10-extra-pkgs.conf
-      xbps-install -Su
+      
+      xbps-install -S
     '
 
     # Then, install core packages
@@ -64,20 +65,20 @@ packages_ask() {
     # And extra
     case "$extra" in
     y | Y)
-      grep -vE '^(#|$)' assets/packages/void/extra.txt | xargs sudo xbps-install -Sy
+      grep -vE '^(#|$)' assets/packages/void/extra.txt | xargs sudo xbps-install -y
       ;;
     esac
   fi
 }
 
-themes_install() {
+prepare_stage() {
   # Installing catppuccin gtk
   printf "\nInstalling catppuccin gtk\n"
 
   git clone https://github.com/VanillaDaFur/catppuccin-gtk.git --recurse-submodules /tmp/catppuccin-gtk
 
   (
-    cd /tmp/catppuccin-gtk
+    cd /tmp/catppuccin-gtk || exit 1 
     python -m venv cat
     source cat/bin/activate
     pip install -r requirements.txt
@@ -85,7 +86,7 @@ themes_install() {
   )
 
   mkdir ~/.config/gtk-4.0
-  ln -s $HOME/.themes/catppuccin-mocha-mauve-standard+rimless,normal/gtk-4.0/* $HOME/.config/gtk-4.0/
+  ln -s "$HOME"/.themes/catppuccin-mocha-mauve-standard+rimless,normal/gtk-4.0/* "$HOME"/.config/gtk-4.0/
 
   # Papirus icons
   printf "\nInstalling papirus icons\n"
@@ -94,7 +95,7 @@ themes_install() {
   git clone https://github.com/catppuccin/papirus-folders.git /tmp/papirus-folders
 
   (
-    cd /tmp/papirus-folders
+    cd /tmp/papirus-folders || exit 1
     curl -LO https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/papirus-folders && chmod +x ./papirus-folders
     cp -r src/* ~/.local/share/icons/Papirus
     ./papirus-folders -C cat-mocha-mauve --theme Papirus-Dark
@@ -118,6 +119,16 @@ themes_install() {
     tar xf /tmp/1a5aaa4c15edb043c37113a8cddf020235917050.tar.gz -C "$HOME"/.local/share/fonts/ReadexPro/
     tar xf /tmp/JetBrainsMono.tar.xz -C "$HOME"/.local/share/fonts/JetBrainsMonoNerd
     fc-cache -f -v
+  fi 
+
+  if [ "$id" = void ]; then
+    # Enabling services and adding user to the _seatd group
+    printf "Enaling services"
+    sudo sh -c '
+      ln -sf /etc/sv/polkitd /etc/runit/runsvdir/default
+      ln -sf /etc/sv/seatd /etc/runit/runsvdir/default
+    '
+    sudo usermod -aG _seatd "$(whoami)"
   fi
 }
 
@@ -129,10 +140,10 @@ copy_configs_set_fish() {
 
   mkdir -p "$HOME/.config" "$HOME/.local/share"
 
-  printf "Copying configs to $HOME/.config\n"
+  printf "%s" "Copying configs to $HOME/.config\n"
   cp -r ./configs/config/* "$HOME"/.config/
 
-  printf "Copying configs to $HOME/.local/share/\n"
+  printf "%s" "Copying configs to $HOME/.local/share/\n"
   cp -r ./configs/local/share/Wallpapers/ "$HOME"/.local/share
 
   printf "Changing shell to fish\n"
@@ -150,7 +161,7 @@ fedora | void | arch)
     # First
     packages_ask
     # Second
-    themes_install
+    prepare_stage
     # Third
     copy_configs_set_fish
 

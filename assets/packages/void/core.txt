@@ -5,6 +5,7 @@ hyprlock
 hypridle
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
+
 kitty
 firefox
 Waybar
@@ -42,3 +43,7 @@ wl-clip-persist
 fish-shell
 neovim
 gcc
+
+google-fonts-ttf
+ttf-jetbrains-mono-nerd 
+xorg-fonts 

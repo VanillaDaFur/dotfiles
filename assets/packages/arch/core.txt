@@ -41,6 +41,7 @@ noto-fonts-emoji
 woff2-font-awesome
 otf-bebas-neue-git
 ttf-readex-pro
+ttf-jetbrains-mono-nerd
 
 nodejs
 npm
