@@ -7,8 +7,8 @@ local catppuccin = {
 	peach = "#fab387",
 	text = "#313244",
 	bg0 = "#181825",
-	bg1 = "#1e1e2e",
-	inactive = "#f5e0dc",
+	bg1 = "none",
+	inactive = "#45475a",
 }
 
 return {
@@ -57,7 +57,7 @@ return {
 				lualine_a = {
 					{
 						"mode",
-						icon = { "", align = "left", color = { fg = "#313244" } },
+						icon = { "", align = "left" },
 					},
 				},
 				lualine_b = {
@@ -92,11 +92,52 @@ return {
 				lualine_z = {
 					{
 						"progress",
-						icon = { "", align = "left", color = { fg = "#313244" } },
+						icon = { "", align = "left" },
 					},
-					--{
-					--  "location", icon = { '', align='left', color={fg='#313244'} },
-					--},
+				},
+			},
+			-- duplicate of main sections
+			inactive_sections = {
+				lualine_a = {
+					{
+						"mode",
+						icon = { "", align = "left" },
+					},
+				},
+				lualine_b = {
+					{
+						"filename",
+						icon = { "", align = "left" },
+					},
+				},
+				lualine_c = {
+					{
+						"branch",
+						icon = { "", align = "left" },
+					},
+					{
+						"diff",
+						colored = true,
+						diff_color = {
+							added = { fg = "#a6e3a1" },
+							modified = { fg = "#f9e2af" },
+							removed = { fg = "#eba0ac" },
+						},
+						symbols = { added = " ", modified = " ", removed = " " },
+					},
+				},
+				lualine_x = {
+					{
+						"diagnostics",
+						symbols = { error = " ", warn = " ", info = " ", hint = " " },
+					},
+				},
+				lualine_y = { "filetype" },
+				lualine_z = {
+					{
+						"progress",
+						icon = { "", align = "left" },
+					},
 				},
 			},
 		},

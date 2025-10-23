@@ -3,13 +3,14 @@ return {
 	config = function()
 		require("conform").setup({
 			formatters_by_ft = {
+				-- Lua
 				lua = { "stylua" },
-				-- Conform will run multiple formatters sequentially
+				-- Python
 				python = { "isort", "black" },
-				-- You can customize some of the format options for the filetype (:help conform.format)
-				rust = { "rustfmt", lsp_format = "fallback" },
-				-- Conform will run the first available formatter
-				javascript = { "prettierd", "prettier", stop_after_first = true },
+				-- C++, C
+				cpp = { "clang-format" },
+				c = { "clang-format" },
+				javascript = { "clang-format" },
 			},
 		})
 		-- Auto format on save

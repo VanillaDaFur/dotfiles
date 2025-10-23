@@ -17,6 +17,8 @@ return {
 
 			auto_hide = true,
 
+			hover = { enabled = false },
+
 			icons = {
 				-- Configure the base icons on the bufferline.
 				-- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
@@ -56,7 +58,7 @@ return {
 				-- Supports all the base icon options, plus `modified` and `pinned`.
 				alternate = { filetype = { enabled = false } },
 				current = { buffer_index = true },
-				inactive = { button = "×" },
+				inactive = { button = "×", filetype = { enabled = false } },
 				visible = { modified = { buffer_number = false } },
 			},
 
