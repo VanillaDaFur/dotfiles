@@ -5,6 +5,7 @@ xdg-user-dirs
 brightnessctl
 sassc
 acpi
+ghostty
 waybar
 rofi
 dunst

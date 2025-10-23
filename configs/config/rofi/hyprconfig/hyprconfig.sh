@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
 compositor="  Compositor"
 monitors=" 󰍺 Monitors"
@@ -9,7 +9,7 @@ input="  Input"
 autostart=" 󰐥 Autostart"
 
 # Variables
-terminal="kitty"
+terminal="ghostty -e"
 confdir="$HOME/.config/hypr/modules/"
 
 # Current theme
@@ -23,7 +23,7 @@ rofi_cmd() {
 }
 
 choices="$compositor\n$monitors\n$keybinds\n$windowrules\n$environment\n$input\n$autostart"
-chosen=$(echo -e "$choices" | rofi_cmd )
+chosen=$(echo "$choices" | rofi_cmd )
 
 case "$chosen" in
   "$compositor")

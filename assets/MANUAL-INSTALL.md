@@ -7,7 +7,7 @@
    1. **Install system packages**
    ```bash
    yay -S hyprland hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland xdg-user-dirs brightnessctl sassc acpi grim slurp hyprpicker wl-clipboard wl-clip-persist wget curl git \
-     kitty firefox waybar rofi dunst swww nwg-look qt6ct nautilus gvfs file-roller vesktop starship neovim swappy exa \
+     ghostty firefox waybar rofi dunst swww nwg-look qt6ct nautilus gvfs file-roller vesktop starship neovim swappy exa \
      noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-font-awesome otf-bebas-neue-git \
      pipewire pipewire-pulse wireplumber darkly frameworkintegration nodejs npm
   ```
@@ -27,7 +27,7 @@
   2. **Install system packages**
   ```bash
   sudo xbps-install -S hyprland hyprland-qtutils hyprland-protocols hyprlock hypridle xdg-desktop-portal-gtk xdg-desktop-portal-hyprland \
-      kitty firefox Waybar nautilus gvfs file-roller qt6ct darkly rofi nwg-look dunst vesktop libnotify swww swappy starship nodejs neovim exa fzf grim slurp hyprpicker wget git curl xz tar gcc \
+      ghostty firefox Waybar nautilus gvfs file-roller qt6ct darkly rofi nwg-look dunst vesktop libnotify swww swappy starship nodejs neovim exa fzf grim slurp hyprpicker wget git curl xz tar gcc \
       brightnessctl sassc acpi polkit seatd elogind mate-polkit mesa-dri xorg-minimal xorg-server-xwayland xdg-user-dirs pipewire wireplumber wl-clipboard wl-clip-persist \
       google-fonts-ttf ttf-jetbrains-mono-nerd xorg-fonts 
   ```
@@ -61,7 +61,7 @@
   2. **Install system packages**
   ```bash
     dnf install hyprland hyprlock hypridle xdg-user-dirs \
-      firefox waybar rofi dunst swww qt6ct nwg-look darkly nautilus file-roller neovim starship eza vesktop telegram-desktop swappy \
+      firefox waybar rofi dunst swww qt6ct nwg-look darkly ghostty nautilus file-roller neovim starship eza vesktop telegram-desktop swappy \
       brightnessctl sassc wget curl git mate-polkit gcc fish-shell \
       google-noto-fonts-all google-noto-emoji-fonts
   ```

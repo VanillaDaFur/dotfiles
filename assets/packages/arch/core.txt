@@ -17,7 +17,7 @@ pipewire-pulse
 wireplumber
 
 darkly
-kitty
+ghostty
 firefox
 waybar
 rofi

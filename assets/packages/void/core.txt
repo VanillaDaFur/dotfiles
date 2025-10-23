@@ -6,7 +6,7 @@ hypridle
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 
-kitty
+ghostty
 firefox
 Waybar
 nautilus

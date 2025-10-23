@@ -1,0 +1,23 @@
+# ~/.config/ghostty/config
+
+# Font
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12.6
+font-style = semibold
+
+# Titlebar
+window-decoration = client
+gtk-titlebar = true
+
+# Fancy stuff
+window-padding-x = 15
+window-padding-y = 20,10
+background-opacity = 0.97
+
+cursor-color = #cba6f7 
+cursor-style = bar
+cursor-style-blink = true
+cursor-opacity = 0.8
+
+# Colorscheme
+theme = catppuccin-mocha
