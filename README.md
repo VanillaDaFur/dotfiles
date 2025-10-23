@@ -16,7 +16,7 @@
 - **Browser**: Firefox
 - **Wallpaper daemon**: [swww](https://github.com/LGFae/swww)
 - **Screenshot tool**: [grim](https://github.com/emersion/grim) + [slurp](https://github.com/emersion/slurp) + [hyprpicker](https://github.com/hyprwm/hyprpicker) (to freeze screen during screenshot)
-- **App Launcher**: [rofi (wayland fork)](https://github.com/lbonn/rofi)
+- **App Launcher**: [rofi](https://github.com/davatorium/rofi)
 - **Terminal**: [ghostty](https://github.com/ghostty-org/ghostty)
 - **Shell**: [fish](https://github.com/fish-shell/fish-shell) + [starship](https://github.com/starship/starship)
 
