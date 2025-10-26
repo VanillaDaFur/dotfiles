@@ -25,7 +25,8 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       640px;
+    width:                       350px;
+    height:                      450px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -49,14 +50,17 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @selected;
     background-color:            transparent;
-    orientation:                 horizontal;
-    children:                    [ "imagebox", "listview" ];
+    orientation:                 vertical;
+    children:                    [ "prompt", "listview" ];
 }
 
-imagebox {
-    padding:                     20px;
-    background-color:            transparent;
-    background-image:            url("~/.config/rofi/hyprconfig/hyprconfig.png", height);
+
+prompt {
+    enabled:                     true;
+    padding:                     8px;
+    border-radius:               4px;
+    background-color:            @selected;
+    text-color:                  @background;
     orientation:                 vertical;
 }
 
@@ -64,8 +68,7 @@ imagebox {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       7;
-    location: east;
+    lines:                       8;
     cycle:                       true;
     scrollbar:                   false;
     layout:                      vertical;
@@ -81,19 +84,12 @@ listview {
     text-color:                  @foreground;
     cursor:                      "default";
 }
-scrollbar {
-    handle-width:                5px ;
-    handle-color:                @selected;
-    border-radius:               0px;
-    background-color:            @background-alt;
-}
 
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
     spacing:                     10px;
     padding:                     8px;
-    width:                       20px;
     border:                      0px solid;
     border-radius:               4px;
     border-color:                @selected;

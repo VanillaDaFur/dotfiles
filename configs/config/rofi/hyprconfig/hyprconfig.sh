@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
-compositor="  Compositor"
-monitors=" 󰍺 Monitors"
-keybinds="  Keybinds"
-windowrules="  Windowrules"
-environment="  Environment"
-input="  Input"
-autostart=" 󰐥 Autostart"
+compositor="  Compositor"
+monitors="  Monitors"
+keybinds=" 󰧹 Keybinds"
+windowrules="  Windowrules"
+environment="  Environment"
+input=" 󰌏 Input"
+autostart="  Autostart"
 
 # Variables
 terminal="ghostty -e"
