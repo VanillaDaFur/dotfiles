@@ -15,11 +15,9 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
-			local mason_lspconfig = require("mason-lspconfig")
-
-			mason_lspconfig.setup({
+			require("mason-lspconfig").setup({
 				ensure_installed = {
+					-- LSP servers
 					"taplo",
 					"jsonls",
 					"tailwindcss",
@@ -28,12 +26,12 @@ return {
 					"lua_ls",
 					"clangd",
 				},
-			})
-
-			mason_lspconfig.setup_handlers({
-				function(server_name)
-					require("lspconfig")[server_name].setup({})
-				end,
+				handlers = {
+					function(server)
+						vim.lsp.config[server] = {}
+						vim.lsp.enable(server)
+					end,
+				},
 			})
 		end,
 	},
