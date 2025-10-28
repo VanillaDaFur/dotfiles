@@ -30,6 +30,35 @@ bash install.sh
 
 If you don't trust such scripts, you can install it manually as described [here](assets/MANUAL-INSTALL.md)
 
+## Keybindings
+| Shortcut                 | Action                                                   |
+|--------------------------|----------------------------------------------------------|
+| **`⌘ + Q`**              | Open terminal                                            |
+| **`⌘ + B`**              | Open browser                                             |
+| **`⌘ + E`**              | Open Nautilus                                            |
+| **`⌘ + L`**              | Open Lutris                                              |
+| **`⌘ + R`**              | Open launcher(Rofi)                                      |
+| **`Shift + E`**          | Open config menu(Rofi)                                   |
+| **`Shitt + W`**          | Open wifi manager(Rofi)                                  |
+| **`⌘ + C`**              | Kill active window                                       |
+| **`⌘ + V`**              | Toggles floating to active window                        |
+| **`⌘ + J`**              | Toggles split                                            |
+| **`⌘ + F`**              | Toggles fullscreen to active window                      |
+| **`⌘ + Alt + ← → ↑ ↓`**  | Move floating window                                     |
+| **`⌘ + Ctrl + ← → ↑ ↓`** | Resize floating window                                   |
+| **`⌘ + ← → ↑ ↓`**        | Move focus to another window                             |
+| **`⌘ + 1-9`**            | Switch workspaces                                        |
+| **`⌘ + Shift + 1-9`**    | Switch workspaces + active window                        |
+| **`⌘ + S`**              | Switch to special workspace                              |
+| **`⌘ + Shift + S`**      | Switch to special workspace + active window              |
+| **`⌘ + Scroll ↑ ↓`**     | Switch workspaces by scrolling                           |
+| **`None + PrtSc`**       | Screenshot to ~/Pictures/Screenshots                     |
+| **`Shift + PrtSc`**      | Screenshot with selection to ~/Pictures/Screenshots      |
+| **`⌘ + U`**              | Restart Waybar                                           |
+| **`⌘ + O`**              | Wallpaper randomizer(placeholder)                        |
+
+> Volume, Brightness, Mic laptop keys supposed to work as expected
+
 # Credits
 - **[HyDE](https://github.com/HyDE-Project/HyDE)**: for providing excellent base for animations
 - **[Rofi Themes](https://github.com/adi1090x/rofi)**: for providing a great base for Rofi
