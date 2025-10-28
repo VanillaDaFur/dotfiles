@@ -18,7 +18,7 @@ wireplumber
 
 darkly
 ghostty
-firefox
+zen-browser
 waybar
 rofi
 dunst

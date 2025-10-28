@@ -114,13 +114,21 @@ wget https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Mod
 tar xvf Bibata-Modern-Classic.tar.xz -C $HOME/.local/share/icons
 ```
 
+### Zen
+1. Install catppuccin zen theme
+```bash
+git clone https://github.com/catppuccin/zen-browser /tmp/zen
+mkdir $HOME/.zen/YOUR_PROFILE/chrome
+cp /tmp/zen/themes/Mocha/Mauve/* $HOME/.zen/YOUR_PROFILE/chrome
+```
+2. Enable `toolkit.legacyUserProfileCustomizations.stylesheets` in about:config
+
 ### Config and fish
-> Please DO make a backup $HOME/.config so you can revert changes if something breaks 
+> Please DO make a backup of $HOME/.config so you can revert changes if something breaks 
 
 1. Simply copy files with these commands:
 ```bash
 cp -r ./configs/config/* "$HOME"/.config/
-
 cp -r ./configs/local/share/Wallpapers/ "$HOME"/.local/share
 ```
 2. Change your shell to fish

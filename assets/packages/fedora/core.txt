@@ -26,4 +26,4 @@ neovim
 fish
 gcc
 mate-polkit
-firefox
+zen-browser

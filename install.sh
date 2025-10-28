@@ -34,6 +34,7 @@ packages_ask() {
     sudo sh -c '
       dnf copr enable -y solopasha/hyprland
       dnf copr enable -y deltacopy/darkly
+      dnf copr enable -y sneexy/zen-browser
 
       dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
       dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm

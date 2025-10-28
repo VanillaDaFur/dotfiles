@@ -1,3 +1,4 @@
 swappy
 vesktop
 telegram-desktop
+lutris

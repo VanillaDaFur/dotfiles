@@ -1,4 +1,4 @@
-<h1 align="center"> My personal dotfiles that uses Catppuccin Mocha</h1>
+<h1 align="center">My personal dotfiles that uses Catppuccin Mocha</h1>
 
 ## Screenshots
 
@@ -12,7 +12,7 @@
 - **Compositor**: [Hyprland (Wayland)](https://hypr.land/)
 - **Status Bar**: [waybar](https://github.com/Alexays/Waybar)
 - **Notification daemon**: [dunst](https://github.com/dunst-project/dunst)
-- **Browser**: Firefox
+- **Browser**: [Zen](httpss://github.com/zen-browser/desktop)
 - **Wallpaper daemon**: [swww](https://github.com/LGFae/swww)
 - **Screenshot tool**: [grim](https://github.com/emersion/grim) + [slurp](https://github.com/emersion/slurp) + [hyprpicker](https://github.com/hyprwm/hyprpicker)
 - **App Launcher**: [rofi](https://github.com/davatorium/rofi)
@@ -20,7 +20,8 @@
 - **Shell**: [fish](https://github.com/fish-shell/fish-shell) + [starship](https://github.com/starship/starship)
 
 ## Installing dotfiles
-> Works only with Arch, Void and Fedora
+> WARNING: This script will make a backup of your `~/.config` to `~/.config-bak/`.
+> This script works only with Arch, Void and Fedora, anything else is unsupported.
 
 You can simply run this command:
 ```

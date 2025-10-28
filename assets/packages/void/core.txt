@@ -7,7 +7,7 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 
 ghostty
-firefox
+zen-browser
 Waybar
 nautilus
 file-roller
