@@ -7,6 +7,9 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
 		version = "^1.0.0",
 		opts = {
 			auto_install = true,
@@ -14,7 +17,12 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		dependencies = {
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
+		},
 		config = function()
+			-- It basically installs lsp servers + enables them
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					-- LSP servers
@@ -32,6 +40,18 @@ return {
 						vim.lsp.enable(server)
 					end,
 				},
+			})
+
+			-- It's almost all default, but i decided to enable virtual text here
+			vim.diagnostic.config({
+				virtual_text = {
+					source = "if_many",
+					prefix = "",
+					spacing = 2,
+				},
+				signs = true,
+				underline = true,
+				update_in_insert = false,
 			})
 		end,
 	},

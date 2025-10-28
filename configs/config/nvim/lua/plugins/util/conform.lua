@@ -7,6 +7,11 @@ return {
 		},
 		config = function()
 			require("conform").setup({
+				format_on_save = {
+					timeout_ms = 5000,
+					async = false,
+					quiet = true,
+				},
 				formatters_by_ft = {
 					-- Lua
 					lua = { "stylua" },
@@ -17,6 +22,11 @@ return {
 					c = { "clang-format" },
 					javascript = { "clang-format" },
 				},
+				formatters = {
+					black = {
+						prepend_args = { "--fast" },
+					},
+				},
 			})
 			-- Adds :Format command, that... formats code, wow.
 			vim.api.nvim_create_user_command("Format", function()
@@ -26,23 +36,17 @@ return {
 					timeout_ms = 5000,
 				})
 			end, {
-				desc = "Format current buffer using Conform",
-			})
-			-- Auto format on save
-			vim.api.nvim_create_autocmd("BufWritePre", {
-				pattern = "*",
-				callback = function(args)
-					require("conform").format({
-						bufnr = args.buf,
-						lsp_fallback = true,
-						timeout_ms = 5000,
-					})
-				end,
+				desc = "Format code using Conform",
 			})
 		end,
 	},
+	-- Installs all formatters used by conform
 	{
 		"zapling/mason-conform.nvim",
+		dependencies = {
+			"stevearc/conform.nvim",
+			"williamboman/mason.nvim",
+		},
 		config = true,
 	},
 }
