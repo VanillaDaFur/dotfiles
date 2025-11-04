@@ -129,6 +129,7 @@ def get_wifi_status():
     return {"status": "enabled", "ssid": None}
 
 
+# Self explanatory
 def get_wifi_prompt():
     wifi_info = get_wifi_status()
 
@@ -142,6 +143,7 @@ def get_wifi_prompt():
         return wifi_info["ssid"]
 
 
+# Sends notification depending on returncode
 def notify_connection_status(success, ssid):
     icon_path = f"{
         home}/.local/share/icons/Papirus/24x24/panel/network-wireless-on.svg"
@@ -175,35 +177,38 @@ def notify_connection_status(success, ssid):
         )
 
 
+# Self explanatory
 for net in networks:
     net["icon"] = level_of_signal_icon(net["signal"], net["known"])
 
-    # Idk what to say here lol
 
+# Running whole rofi stuff into a loop
 while True:
     menu_items = []
 
     menu_items.extend(
         [
-            f"{net["icon"]}  {net["signal"]} {
-                      net["ssid"]}"
+            f"{net['icon']}  {net['signal']} {
+                      net['ssid']}"
             for net in known_nets
         ]
     )
 
     menu_items.extend(
         [
-            f"{net["icon"]}  {net["signal"]} {
-                      net["ssid"]}"
+            f"{net['icon']}  {net['signal']} {
+                      net['ssid']}"
             for net in unknown_nets
         ]
     )
 
+    # Adds button to the bottom that disables/enables wifi radio
+    # (why do i even comment on this lol)
     wifi_info = get_wifi_status()
     if wifi_info["status"] == "enabled" or wifi_info["status"] == "connected":
-        menu_items.extend(["󱚶  Disable Wi-FI"])
+        menu_items.extend(["󱚶  Disable Wi-Fi"])
     else:
-        menu_items.extend(["󱚺  Enable Wi-FI"])
+        menu_items.extend(["󱚺  Enable Wi-Fi"])
 
     # and it readable for dmenu
     menu_input = "\n".join(menu_items)
@@ -227,7 +232,7 @@ while True:
         selected = chosen.stdout.strip()
 
         # Check if wifi toggle option was chosen
-        if selected in ["󱚶  Disable Wi-FI", "󱚺  Enable Wi-FI"]:
+        if selected in ["󱚶  Disable Wi-Fi", "󱚺  Enable Wi-Fi"]:
             if "Disable" in selected:
                 # nmcli then notify-send
                 subprocess.run(["nmcli", "radio", "wifi", "off"])
@@ -282,7 +287,10 @@ while True:
                     print(f"Connecting to Wi-Fi {selected_ssid}...")
                     result = subprocess.run(["nmcli", "con", "up", selected_ssid])
 
-                    notify_connection_status(result.returncode == 0, selected_ssid)
+                    if result.returncode == 0:
+                        notify_connection_status(True, selected_ssid)
+                    else:
+                        notify_connection_status(False, selected_ssid)
             else:
                 print("No was chosen, doing nothing")
         # If not known
