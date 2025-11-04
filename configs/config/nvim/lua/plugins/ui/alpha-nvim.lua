@@ -22,6 +22,7 @@ return {
 				dashboard.button("e", "󰈔   New file", ":ene <BAR> startinsert <CR>"),
 				dashboard.button("f", "   Find file", ":cd $HOME | Telescope find_files<CR>"),
 				dashboard.button("r", "   Recent", ":Telescope oldfiles<CR>"),
+				dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
 				dashboard.button("s", "   Settings", ":cd $HOME/.config/nvim | Telescope find_files<CR>"),
 				dashboard.button("q", "󰍃   Quit", ":qa<CR>"),
 			}
