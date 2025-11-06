@@ -62,4 +62,5 @@ If you don't trust such scripts, you can install it manually as described [here]
 # Credits
 - **[HyDE](https://github.com/HyDE-Project/HyDE)**: for providing excellent base for animations
 - **[Rofi Themes](https://github.com/adi1090x/rofi)**: for providing a great base for Rofi
-- **[Catppuccin colorscheme](https://catppuccin.com/)**: for their beautiful colorscheme
+- **[Catppuccin colorscheme](https://catppuccin.com)**: for their beautiful colorscheme
+- **[Midnight-Discord](https://github.com/refact0r/midnight-discord)**: for beautiful discord theme

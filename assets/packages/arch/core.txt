@@ -16,9 +16,8 @@ pipewire
 pipewire-pulse
 wireplumber
 
-darkly
 ghostty
-zen-browser
+zen-browser-bin
 waybar
 rofi
 dunst
